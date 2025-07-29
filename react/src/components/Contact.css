@@ -1,0 +1,95 @@
+/* Contact Section */
+.contact-section {
+  background: var(--bg-secondary);
+  border-top: 6px solid var(--primary-color);
+}
+
+.contact-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 50%;
+  border: 4px solid var(--border-color);
+  font-size: 1.8rem;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  box-shadow: var(--shadow-cartoon);
+}
+
+.contact-link:hover {
+  transform: translateY(-8px) scale(1.2) rotate(10deg);
+  box-shadow: var(--shadow-hover);
+}
+
+.contact-link.linkedin:hover { 
+  background: #0077b5; 
+  color: white;
+  border-color: #0077b5;
+}
+
+.contact-link.github:hover { 
+  background: #333; 
+  color: white;
+  border-color: #333;
+}
+
+.contact-link.facebook:hover { 
+  background: #1877f2; 
+  color: white;
+  border-color: #1877f2;
+}
+
+.contact-link.instagram:hover { 
+  background: #e4405f; 
+  color: white;
+  border-color: #e4405f;
+}
+
+.contact-link.kaggle:hover { 
+  background: #20beff; 
+  color: white;
+  border-color: #20beff;
+}
+
+.contact-link.email:hover { 
+  background: #ea4335; 
+  color: white;
+  border-color: #ea4335;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-links {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-links {
+    gap: 1rem;
+  }
+
+  .contact-link {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+  }
+}
