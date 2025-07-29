@@ -107,31 +107,13 @@
 
         /* Navigation */
         nav {
-            background: var(--bg-primary);
-            padding: 1.2rem 2rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            box-shadow: var(--shadow-soft);
-            z-index: 1000;
-            border-bottom: 3px solid var(--primary-color);
-            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-
-        nav.scrolled {
-            padding: 0.8rem 2rem;
-            transform: translateY(-2px);
-        }
-
-        /* Navigation */
-        nav {
             background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
             padding: 1rem 2rem;
             position: fixed;
             width: 100%;
             top: 0;
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-soft);
             z-index: 1000;
             border-bottom: 1px solid var(--border-color);
             transition: all 0.3s ease;
@@ -170,7 +152,7 @@
         }
 
         .logo::after {
-            content: '🚀';
+            content: '';
             font-size: 1.2rem;
             margin-left: 0.5rem;
             animation: rocket 2s ease-in-out infinite;
@@ -351,6 +333,42 @@
         .btn-secondary:active {
             transform: translateY(0px);
             box-shadow: 0 4px 0 #cbd5e0;
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: 3px solid transparent;
+            box-shadow: var(--shadow-cartoon);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-download::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn-download:hover::before {
+            left: 0;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+            border-color: #667eea;
+        }
+
+        .btn-download:active {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
         }
 
         .scroll-indicator {
@@ -870,12 +888,15 @@
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 1rem;
             }
 
             .btn {
                 width: 100%;
-                max-width: 350px;
+                max-width: 280px;
                 justify-content: center;
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
             }
 
             section {
@@ -904,6 +925,22 @@
 
             .hero-subtitle {
                 font-size: 1.3rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .cta-buttons {
+                gap: 0.8rem;
+            }
+
+            .btn {
+                max-width: 250px;
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
+                gap: 0.6rem;
             }
 
             .section-title {
@@ -1038,6 +1075,7 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -1052,17 +1090,21 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Hi, I'm Istiaque! 👋</h1>
+            <h1 class="hero-title">Hi, I'm Istiaque!</h1>
             <p class="hero-subtitle">Data Scientist | ML Engineer | AI Enthusiast</p>
-            <p class="hero-description">I transform complex data into beautiful insights and build intelligent systems that make a difference in the world! ✨</p>
+            <p class="hero-description">From crafting intelligent chatbots to building RAG pipelines and automation systems—I love turning innovative ideas into practical AI solutions that solve real problems!</p>
             <div class="cta-buttons">
-                <a href="#about" class="btn btn-primary">
+                <a href="#projects" class="btn btn-primary">
                     <i class="fas fa-rocket"></i>
                     Explore My Work
                 </a>
                 <a href="#contact" class="btn btn-secondary">
                     <i class="fas fa-coffee"></i>
                     Let's Chat!
+                </a>
+                <a href="assets/Istiaque_Ahmed_CV.pdf" class="btn btn-download" download="Istiaque_Ahmed_CV.pdf">
+                    <i class="fas fa-download"></i>
+                    Download CV
                 </a>
             </div>
         </div>
@@ -1075,23 +1117,23 @@
     <section id="about">
         <div class="section-decoration top-left"></div>
         <div class="container">
-            <h2 class="section-title">What I Do ✨</h2>
-            <p class="section-subtitle">I'm passionate about turning data into stories and building AI solutions that make the world a little bit better! 🌟</p>
+            <h2 class="section-title">What I Do</h2>
+            <p class="section-subtitle">I help developers seamlessly integrate cutting-edge AI into their applications, building intelligent systems that transform how businesses operate!</p>
             <div class="about-grid">
                 <div class="about-card">
-                    <i class="fas fa-chart-pie"></i>
-                    <h3>Data Wizardry 🎯</h3>
-                    <p>I dive deep into messy data and emerge with crystal-clear insights! Using advanced analytics and statistical magic to uncover patterns that drive smart decisions.</p>
+                    <i class="fas fa-comments"></i>
+                    <h3>AI Integration & Chatbots</h3>
+                    <p>I specialize in helping developers integrate AI into their applications with intelligent chatbots, RAG pipelines, and LLM-powered solutions that enhance user experiences and automate complex workflows.</p>
                 </div>
                 <div class="about-card">
-                    <i class="fas fa-robot"></i>
-                    <h3>AI & Machine Learning 🤖</h3>
-                    <p>Building intelligent systems that learn and adapt! From predictive models to neural networks, I create AI solutions that solve real-world challenges.</p>
+                    <i class="fas fa-brain"></i>
+                    <h3>Deep Learning & Model Building</h3>
+                    <p>Building and fine-tuning advanced deep learning models for NLP and Computer Vision. From custom neural networks to specialized AI models that solve specific business challenges with precision.</p>
                 </div>
                 <div class="about-card">
-                    <i class="fas fa-palette"></i>
-                    <h3>Data Storytelling 📊</h3>
-                    <p>Transforming complex data into beautiful, engaging visualizations that anyone can understand. Making data accessible and actionable for everyone!</p>
+                    <i class="fas fa-magic"></i>
+                    <h3>Gen AI & Automation</h3>
+                    <p>Creating generative AI solutions and intelligent automation systems that streamline operations. From automated content generation to AI-powered business process optimization.</p>
                 </div>
             </div>
         </div>
@@ -1100,13 +1142,13 @@
 
     <section id="education">
         <div class="container">
-            <h2 class="section-title">My Learning Journey 🎓</h2>
+            <h2 class="section-title">My Learning Journey</h2>
             <div class="about-grid">
                 <div class="about-card">
                     <i class="fa-solid fa-university"></i>
-                    <h3><a href="https://www.bracu.ac.bd/" style="text-decoration: none; color: inherit;">Brac University 🏛️</a></h3>
-                    <p>Bachelor of Science in Computer Science 💻<br>
-                    Specialized in Data Science, Machine Learning, and Software Engineering. Built a strong foundation in algorithms, statistics, and intelligent systems!</p>
+                    <h3><a href="https://www.bracu.ac.bd/" style="text-decoration: none; color: inherit;">Brac University</a></h3>
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; font-weight: 700;">Bachelor of Science in Computer Science</h4>
+                    <p>Specialized in Data Science, Machine Learning, and Software Engineering. Built a strong foundation in algorithms, statistics, and intelligent systems!</p>
                 </div>
             </div>
         </div>
@@ -1115,21 +1157,21 @@
     <section id="experience">
         <div class="section-decoration top-left"></div>
         <div class="container">
-            <h2 class="section-title">Professional Adventures 💼</h2>
+            <h2 class="section-title">Professional Adventures</h2>
             <div class="about-grid">
                 <div class="about-card">
                     <i class="fas fa-briefcase"></i>
-                    <h3><a href="https://www.joinventureai.com/" style="text-decoration: none; color: inherit;" target="_blank">Join Venture AI 🚀</a></h3>
+                    <h3><a href="https://www.joinventureai.com/" style="text-decoration: none; color: inherit;" target="_blank">Join Venture AI</a></h3>
                     <h4 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 1.2rem; font-weight: 700;">Data Scientist & AI Engineer</h4>
-                    <p>Creating cutting-edge AI magic! ✨ Building intelligent chatbots, RAG pipelines, and generative AI applications that revolutionize how businesses operate. Specializing in AI automation and end-to-end machine learning systems.</p>
+                    <p>Creating cutting-edge AI magic! Building intelligent chatbots, RAG pipelines, and generative AI applications that revolutionize how businesses operate. Specializing in AI automation and end-to-end machine learning systems.</p>
                     <div class="tech-stack" style="margin-top: 2rem;">
-                        <span class="tech">Python 🐍</span>
-                        <span class="tech">LLMs 🧠</span>
-                        <span class="tech">RAG Pipelines ⚡</span>
-                        <span class="tech">Chatbots 💬</span>
-                        <span class="tech">Gen AI 🎨</span>
-                        <span class="tech">ML Automation 🔄</span>
-                        <span class="tech">Deep Learning 🔥</span>
+                        <span class="tech">Python</span>
+                        <span class="tech">LLMs</span>
+                        <span class="tech">RAG Pipelines</span>
+                        <span class="tech">Chatbots</span>
+                        <span class="tech">Gen AI</span>
+                        <span class="tech">ML Automation</span>
+                        <span class="tech">Deep Learning</span>
                     </div>
                 </div>
             </div>
@@ -1139,67 +1181,79 @@
 
     <section id="skills">
         <div class="container">
-            <h2 class="section-title">My Superpowers 💪</h2>
-            <p class="section-subtitle">A magical toolkit for conquering data challenges and building amazing AI solutions! 🛠️✨</p>
+            <h2 class="section-title">My Superpowers</h2>
+            <p class="section-subtitle">From machine learning frameworks to cloud platforms—here's my tech arsenal for building next-generation AI applications!</p>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3><i class="fab fa-python"></i>Programming Languages 💻</h3>
+                    <h3><i class="fas fa-brain"></i>AI & Machine Learning</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">Python 🐍</span>
-                        <span class="skill-tag">R 📊</span>
-                        <span class="skill-tag">SQL 🗃️</span>
-                        <span class="skill-tag">Java ☕</span>
-                        <span class="skill-tag">JavaScript 🌐</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Machine Learning</span>     
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Natural Language Processing</span>  
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Reinforcement Learning</span>
+                        <span class="skill-tag">Generative AI</span>
+                        <span class="skill-tag">Agentic AI</span>
+                        <span class="skill-tag">Large Language Models</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">Retrieval-Augmented Generation (RAG)</span>
+                        <span class="skill-tag">Model Distillation, Quantization</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i>AI & Machine Learning 🤖</h3>
+                    <h3><i class="fas fa-cogs"></i>Dev Tools & Frameworks</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">Scikit-learn 🔬</span>
-                        <span class="skill-tag">TensorFlow 🧠</span>
-                        <span class="skill-tag">PyTorch 🔥</span>
-                        <span class="skill-tag">Keras ⚡</span>
-                        <span class="skill-tag">XGBoost 🚀</span>
+                        <span class="skill-tag">Pytorch</span>
+                        <span class="skill-tag">Tensorflow</span>
+                        <span class="skill-tag">Hugging Face</span>
+                        <span class="skill-tag">Langchain</span>
+                        <span class="skill-tag">LangGraph</span>
+                        <span class="skill-tag">ChromaDB</span>
+                        <span class="skill-tag">Faiss</span>
+                        <span class="skill-tag">Pinecone</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">MediaPipe</span>
+                        
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-database"></i>Data Tools 📈</h3>
+                    <h3><i class="fas fa-database"></i>APIs & Integrations</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">Pandas 🐼</span>
-                        <span class="skill-tag">NumPy 🔢</span>
-                        <span class="skill-tag">Jupyter 📓</span>
-                        <span class="skill-tag">Apache Spark ⚡</span>
-                        <span class="skill-tag">Hadoop 🐘</span>
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">n8n</span>
+                        <span class="skill-tag">Twilio</span>
+                        <span class="skill-tag">Serper</span>
+                        <span class="skill-tag">Zapier</span>
+                        <span class="skill-tag">Make</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">WebSockets</span>
+                        <span class="skill-tag">GraphQL</span>
+                    </div>
+                </div>
+    
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i>Cloud & DevOps</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Linux</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3><i class="fas fa-chart-bar"></i>Visualization Magic 🎨</h3>
+                    <h3><i class="fas fa-code"></i>Web Development</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">Matplotlib 📊</span>
-                        <span class="skill-tag">Seaborn 🌊</span>
-                        <span class="skill-tag">Plotly 📈</span>
-                        <span class="skill-tag">Tableau 📋</span>
-                        <span class="skill-tag">Power BI ⚡</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i>Cloud & DevOps ☁️</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">AWS ☁️</span>
-                        <span class="skill-tag">Azure 🌐</span>
-                        <span class="skill-tag">Docker 🐳</span>
-                        <span class="skill-tag">Git 🔀</span>
-                        <span class="skill-tag">Linux 🐧</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i>Web Development 🌟</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">HTML/CSS 🎨</span>
-                        <span class="skill-tag">React ⚛️</span>
-                        <span class="skill-tag">Node.js 🟢</span>
-                        <span class="skill-tag">Spring Boot 🍃</span>
-                        <span class="skill-tag">MySQL 🗄️</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">MySQL</span>
                     </div>
                 </div>
             </div>
@@ -1207,14 +1261,196 @@
     </section>
 
     <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Showcasing my work in AI integration, chatbots, and intelligent automation systems</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/IstiaqueAhmd/couple-counselor-ai-websocket" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-Powered Marriage Counselor</h3>
+                        <p>Developed an AI-powered couple counseling platform that provides professional relationship guidance through an intelligent chatbot interface. 
+                            The application leverages an advanced retrieval technique to understand both partners' perspectives and offer personalized advice.</p>
+                        <div class="tech-stack">
+                            <span class="tech">Python</span>
+                            <span class="tech">FastAPI</span>
+                            <span class="tech">WebSockets</span>
+                            <span class="tech">OpenAI</span>
+                            <span class="tech">ChromaDB</span>
+                            <span class="tech">HTML</span>
+                            <span class="tech">CSS</span>
+                            <span class="tech">JavaScript</span>
+                            <span class="tech">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/IstiaqueAhmd/slidegen_app" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-Powered Slide Generation Platform</h3>
+                        <p>Developed an intelligent presentation generation system that automatically creates professional slides from text input. The platform leverages multiple AI models to generate structured content, designs, and layouts for seamless presentation creation.</p>
+                        <div class="tech-stack">
+                            <span class="tech">FastAPI</span>
+                            <span class="tech">OpenAI</span>
+                            <span class="tech">MongoDB</span>
+                            <span class="tech">OpenRouter API</span>
+                            <span class="tech">Python</span>
+                            <span class="tech">RESTful APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Multi-Agent AI Assistant Platform</h3>
+                        <p>Created an agentic AI platform using LangGraph where multiple specialized AI agents collaborate to solve complex business tasks. Features task delegation and real-time monitoring.</p>
+                        <div class="tech-stack">
+                            <span class="tech">LangGraph</span>
+                            <span class="tech">Anthropic</span>
+                            <span class="tech">Pinecone</span>
+                            <span class="tech">Streamlit</span>
+                            <span class="tech">AWS</span>
+                            <span class="tech">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Real-time Sentiment Analysis Dashboard</h3>
+                        <p>Developed a live sentiment analysis system for social media monitoring using fine-tuned transformer models. Provides real-time insights and trend analysis for brand monitoring.</p>
+                        <div class="tech-stack">
+                            <span class="tech">TensorFlow</span>
+                            <span class="tech">BERT</span>
+                            <span class="tech">Kafka</span>
+                            <span class="tech">Redis</span>
+                            <span class="tech">D3.js</span>
+                            <span class="tech">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Intelligent Code Review Assistant</h3>
+                        <p>Built an AI-powered code review system that automatically identifies bugs, suggests improvements, and ensures coding standards. Integrated with GitHub and supports multiple programming languages.</p>
+                        <div class="tech-stack">
+                            <span class="tech">Transformers</span>
+                            <span class="tech">CodeBERT</span>
+                            <span class="tech">GitHub API</span>
+                            <span class="tech">Flask</span>
+                            <span class="tech">Azure</span>
+                            <span class="tech">Webhook</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/IstiaqueAhmd/Alien-Shooter-Game" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>2D Alien Shooter Game</h3>
+                        <p>Developed an exciting 2D alien shooter game from scratch using Python and OpenGL. Features smooth gameplay mechanics, collision detection, power-ups, and progressive difficulty levels with retro-style graphics and engaging sound effects.</p>
+                        <div class="tech-stack">
+                            <span class="tech">Python</span>
+                            <span class="tech">OpenGL</span>
+                            <span class="tech">PyOpenGL</span>
+                            <span class="tech">Game Development</span>
+                            <span class="tech">2D Graphics</span>
+                            <span class="tech">Collision Detection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Let's Connect! 🌟</h2>
+            <h2 class="section-title">Let's Connect!</h2>
             <div class="contact-content">
-                <p class="section-subtitle">Ready to collaborate on something amazing? Let's chat about data science, AI, and all the cool things we can build together! ☕✨</p>
+                <p class="section-subtitle">Ready to collaborate on something amazing? Let's chat about data science, AI, and all the cool things we can build together!</p>
             </div>
             <div class="contact-links">
                 <a href="https://www.linkedin.com/in/istiak-ahmd/" class="contact-link linkedin"><i class="fab fa-linkedin"></i></a>
@@ -1382,7 +1618,7 @@
         document.querySelectorAll('.btn').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 const sparkle = document.createElement('div');
-                sparkle.innerHTML = '✨';
+                sparkle.innerHTML = '*';
                 sparkle.style.position = 'absolute';
                 sparkle.style.left = e.pageX + 'px';
                 sparkle.style.top = e.pageY + 'px';
