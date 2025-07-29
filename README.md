@@ -1,106 +1,102 @@
-# Istiaque Ahmed's Portfolio
+# Istiaque Ahmed's Portfolio - React Version
 
 A modern, responsive portfolio website built with React showcasing my skills as a Data Scientist and AI Engineer.
 
-## 🚀 Live Demo
+## Features
 
-Visit the live portfolio: [https://IstiakAhmd.github.io/portfolio](https://IstiakAhmd.github.io/portfolio)
+- **Modern React Architecture**: Component-based structure for maintainability
+- **Responsive Design**: Works perfectly on all devices
+- **Smooth Animations**: Engaging user experience with CSS animations
+- **Interactive Elements**: Hover effects and smooth scrolling navigation
+- **Clean Design**: Professional look without distracting emojis
+- **Fast Performance**: Optimized React application
 
-## 🛠️ Built With
+## Sections
 
-- **React** - Frontend library
-- **CSS3** - Styling with custom animations
-- **Font Awesome** - Icons
-- **GitHub Pages** - Hosting
+- **Hero**: Introduction and call-to-action
+- **About**: What I do and my specializations
+- **Education**: Academic background
+- **Experience**: Professional work experience
+- **Skills**: Technical skills organized by category
+- **Contact**: Social media and contact links
 
-## 🎨 Features
+## Technologies Used
 
-- **Responsive Design** - Works on all device sizes
-- **Modern UI/UX** - Clean, professional design
-- **Smooth Animations** - Engaging hover effects and transitions
-- **Interactive Navigation** - Smooth scrolling between sections
-- **Mobile-Friendly** - Optimized for mobile devices
+- React 18
+- CSS3 with custom properties
+- Font Awesome icons
+- Google Fonts (Poppins & Fredoka One)
 
-## 📱 Sections
-
-- **Hero** - Introduction and call-to-action
-- **About** - What I do and my approach
-- **Education** - Academic background
-- **Experience** - Professional experience
-- **Skills** - Technical skills and expertise
-- **Contact** - Social media links and contact information
-
-## 🚀 Local Development
+## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
-- npm
+- Node.js (version 14 or higher)
+- npm or yarn
 
 ### Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/IstiakAhmd/portfolio.git
-   cd portfolio
-   ```
-
-2. Navigate to the React app directory:
+1. Navigate to the react directory:
    ```bash
    cd react
    ```
 
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-4. Start the development server:
+3. Start the development server:
    ```bash
    npm start
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## 📦 Build for Production
+### Available Scripts
 
-```bash
-cd react
-npm run build
+- `npm start` - Runs the app in development mode
+- `npm run build` - Builds the app for production
+- `npm test` - Launches the test runner
+- `npm run eject` - Ejects from Create React App (one-way operation)
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Navbar.js & Navbar.css
+│   ├── Hero.js & Hero.css
+│   ├── About.js & About.css
+│   ├── Education.js & Education.css
+│   ├── Experience.js & Experience.css
+│   ├── Skills.js & Skills.css
+│   └── Contact.js & Contact.css
+├── App.js & App.css
+├── index.js & index.css
+└── ...
 ```
 
-## 🚀 Deployment
+## Customization
 
-The site is automatically deployed to GitHub Pages using GitHub Actions when changes are pushed to the main branch.
+To customize the portfolio:
 
-### Manual Deployment
+1. **Personal Information**: Update the content in each component file
+2. **Styling**: Modify the CSS custom properties in `index.css` for colors and themes
+3. **Skills**: Update the skills array in `Skills.js`
+4. **Contact Links**: Modify the contact links in `Contact.js`
 
-You can also deploy manually using:
+## Deployment
 
-```bash
-cd react
-npm run deploy
-```
+To deploy to production:
 
-## 📝 Customization
+1. Build the project:
+   ```bash
+   npm run build
+   ```
 
-To customize the portfolio for your own use:
+2. Deploy the `build` folder to your hosting provider
 
-1. Update the content in each component file in `src/components/`
-2. Modify the color scheme in `src/index.css` by changing the CSS custom properties
-3. Replace social media links in `src/components/Contact.js`
-4. Update the homepage URL in `package.json`
-
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
-
-## 📧 Contact
-
-- **LinkedIn**: [Istiak Ahmed](https://www.linkedin.com/in/istiak-ahmd/)
-- **GitHub**: [IstiakAhmd](https://github.com/IstiakAhmd)
-- **Email**: istiak6000@gmail.com
-
----
-
-Made with ❤️ by Istiaque Ahmed
