@@ -717,6 +717,96 @@ body {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   Skills Section
+   ───────────────────────────────────────────────────────────────────────────── */
+.skills-section {
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 43, 54, 0.2) 50%, transparent 100%);
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+}
+
+.skill-category {
+    background: rgba(0, 229, 255, 0.03);
+    border: 1px solid rgba(0, 229, 255, 0.15);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: all var(--transition-base);
+}
+
+.skill-category:hover {
+    background: rgba(0, 229, 255, 0.06);
+    border-color: rgba(0, 229, 255, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), var(--glow-box-subtle);
+}
+
+.skill-category-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.skill-category-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--color-accent-primary);
+    flex-shrink: 0;
+}
+
+.skill-category-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.skill-category-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.skill-tag {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+}
+
+.skill-tag:hover {
+    background: rgba(0, 229, 255, 0.1);
+    border-color: rgba(0, 229, 255, 0.3);
+    color: var(--color-text-primary);
+}
+
+.skill-tag-primary {
+    background: rgba(0, 229, 255, 0.15);
+    border-color: rgba(0, 229, 255, 0.4);
+    color: var(--color-accent-primary);
+    font-weight: 500;
+}
+
+.skill-tag-primary:hover {
+    background: rgba(0, 229, 255, 0.25);
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
    Experience Timeline
    ───────────────────────────────────────────────────────────────────────────── */
 .experience-section {
