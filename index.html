@@ -472,9 +472,11 @@
                         <h3 class="service-title">Legal Sherpa</h3>
                         <p class="service-description">
                             Full-featured AI legal chatbot built with FastAPI and OpenAI GPT. Implements a complete RAG
-                            pipeline—users upload PDF/DOCX/TXT files which are processed, chunked, and stored in
-                            ChromaDB
-                            for semantic search. Features comprehensive auth (JWT + Google OAuth + OTP verification),
+                            pipeline where lawyers upload PDF/DOCX/TXT documents which are processed, chunked, and
+                            stored
+                            in ChromaDB for semantic search. Users receive context-aware legal information powered by
+                            the
+                            knowledge base. Features comprehensive auth (JWT + Google OAuth + OTP verification),
                             role-based admin access for document management, multi-session chat with persistent history
                             in PostgreSQL, and auto-generated session titles. Deployed to production with
                             environment-based
@@ -489,14 +491,51 @@
                             <span>JWT/OAuth</span>
                         </div>
                         <a href="https://legalsherpa.cloud/" target="_blank" class="service-link">
-                            <span>View Live</span>
+                            <span>View Live: legalsherpa.com</span>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
                     </div>
-                    <!-- Project 2 -->
+                    <!-- Project 2: Auto-Attendance -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5" />
+                                <path d="M4 20C4 16.6863 7.58172 14 12 14C16.4183 14 20 16.6863 20 20"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                <path d="M15 11L17 13L21 9" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <span class="service-tag">Computer Vision</span>
+                        <h3 class="service-title">Auto-Attendance</h3>
+                        <p class="service-description">
+                            Automated face recognition attendance system built with FastAPI and InsightFace using ONNX
+                            Runtime. Handles face registration by encoding and storing face embeddings in PostgreSQL.
+                            Recognition engine processes static images, video files, or live camera feeds via WebSocket
+                            connections. Features modular architecture with separated API routes, core
+                            detection/matching
+                            logic, and async SQLAlchemy 2.0 data layer. Automatically logs attendance records with
+                            querying and reporting capabilities.
+                        </p>
+                        <div class="project-tech">
+                            <span>FastAPI</span>
+                            <span>InsightFace</span>
+                            <span>OpenCV</span>
+                            <span>WebSocket</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <a href="https://github.com/IstiaqueAhmd" target="_blank" class="service-link">
+                            <span>View Project</span>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- Project 3 -->
                     <div class="service-card">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
