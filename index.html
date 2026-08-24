@@ -5,364 +5,559 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Istiaque Ahmed - Data Scientist & AI Engineer. Specialized in Agentic AI, NLP, and Full Stack Development.">
-    <meta name="keywords" content="Istiaque Ahmed, Data Scientist, AI Engineer, Machine Learning, NLP, FastAPI, Python">
+        content="Istiaque Ahmed - Data Scientist, AI Engineer & Full-Stack Developer. Building intelligent systems and digital products that solve real problems.">
+    <meta name="keywords" content="Istiaque Ahmed, Data Scientist, AI Engineer, Machine Learning, LangChain, FastAPI, Python, Portfolio">
     <meta name="author" content="Istiaque Ahmed">
     <title>Istiaque Ahmed | Data Scientist & AI Engineer</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
+
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Neural Network Background Canvas -->
-    <canvas id="neural-network"></canvas>
-
-    <!-- Vignette Overlay -->
-    <div class="vignette-overlay"></div>
-
-    <!-- Navigation Bar -->
+    <!-- Top Navigation Bar -->
     <header class="navbar" id="navbar">
-        <div class="navbar-container">
-            <!-- Logo -->
-            <a href="#home" class="navbar-logo">
-                <span class="logo-text">ISTIAQUE</span>
-                <span class="logo-dot"></span>
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="brand-logo" aria-label="Istiaque Ahmed Home">
+                <span class="logo-letters">IA</span>
+                <span class="logo-dot">.</span>
             </a>
 
-            <!-- Mobile Menu Toggle -->
-            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
-                <span class="toggle-bar"></span>
-                <span class="toggle-bar"></span>
-                <span class="toggle-bar"></span>
-            </button>
-
-            <!-- Navigation Links -->
-            <nav class="navbar-nav" id="navbar-nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#skills" class="nav-link">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#experience" class="nav-link">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
+            <!-- Desktop Navigation Links -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#process" class="nav-link">Process</a></li>
                 </ul>
             </nav>
+
+            <!-- Right CTA & Mobile Toggle -->
+            <div class="nav-actions">
+                <a href="#contact" class="btn-talk" id="btn-open-contact">
+                    <span>Let's Talk</span>
+                    <svg class="btn-arrow" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.166 10h11.667M10.833 5l5 5-5 5" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+                    <span class="toggle-bar"></span>
+                    <span class="toggle-bar"></span>
+                    <span class="toggle-bar"></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Main Container -->
-    <main class="main-container">
-        <!-- Hero Section (Home) -->
-        <section class="hero section" id="home">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="title-main">ISTIAQUE AHMED</span>
-                </h1>
-                <p class="hero-subtitle">Data Scientist | AI Engineer </p>
-                <p class="hero-description">
-                    Building intelligent systems that bridge the gap between research and real-world application.
-                    Specializing in Agentic AI, NLP pipelines, and scalable backend architectures.
-                </p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">
-                        <span>Get Started</span>
-                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
-                    <a href="assets/Istiaque_Ahmed_CV.pdf" class="btn btn-secondary" download>Download CV</a>
-                </div>
-            </div>
-            <!-- Scroll Indicator -->
-            <div class="scroll-indicator">
-                <span class="scroll-text">Scroll to explore</span>
-                <div class="scroll-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </div>
-        </section>
+    <!-- Main Content Container -->
+    <main class="main-wrapper">
+        <!-- Hero Section -->
+        <section class="section hero-section" id="home">
+            <div class="container hero-grid">
+                <!-- Left Hero Content -->
+                <div class="hero-left">
+                    <div class="greeting-badge">
+                        <span>Hi, I'm</span>
+                        <div class="greeting-line"></div>
+                    </div>
 
-        <!-- About Section -->
-        <section class="section about-section" id="about">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">About Me</span>
-                    <h2 class="section-title">Who I <span class="text-accent">Am</span></h2>
-                    <p class="section-subtitle">Transforming complex ideas into intelligent, production-ready systems
+                    <h1 class="hero-name">
+                        <span class="name-first">Istiaque</span>
+                        <span class="name-last">Ahmed</span>
+                    </h1>
+
+                    <h2 class="hero-role">Data Scientist & AI Engineer</h2>
+
+                    <p class="hero-bio">
+                        I build digital products and intelligent systems that solve real problems and create meaningful
+                        impact. From idea to deployment, I turn complex challenges into simple, beautiful solutions.
                     </p>
-                </div>
-                <div class="about-grid">
-                    <!-- Left Column: Profile -->
-                    <div class="about-profile">
-                        <div class="about-profile-header">
-                            <div class="about-avatar">
-                                <span class="avatar-initials">IA</span>
-                            </div>
-                            <div class="about-profile-info">
-                                <h3 class="about-name">Istiaque Ahmed</h3>
-                                <p class="about-role">Data Scientist & AI Engineer</p>
-                                <p class="about-location">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
-                                            stroke="currentColor" stroke-width="1.5" />
-                                        <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5" />
-                                    </svg>
-                                    Dhaka, Bangladesh
-                                </p>
-                            </div>
-                        </div>
-                        <div class="about-bio">
-                            <p>
-                                A Computer Science graduate from Brac University (2025) with a passion for building
-                                end-to-end AI solutions. I specialize in agentic AI systems, NLP pipelines, and
-                                scalable backend architectures.
-                            </p>
-                            <p>
-                                My work bridges research and real-world application — from lightweight CNNs for
-                                edge devices to multi-agent systems with contextual memory.
-                            </p>
-                        </div>
-                        <div class="about-links">
-                            <a href="https://github.com/IstiaqueAhmd" target="_blank" class="about-link">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                                GitHub
-                            </a>
-                            <a href="https://linkedin.com/in/istiaque-ahmd" target="_blank" class="about-link">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5" />
-                                    <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5" />
-                                </svg>
-                                LinkedIn
-                            </a>
-                            <a href="mailto:istiaque.inbox@gmail.com" class="about-link">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
-                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                Email
-                            </a>
-                        </div>
+
+                    <div class="hero-buttons">
+                        <a href="#work" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <svg class="btn-arrow-inline" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.166 10h11.667M10.833 5l5 5-5 5" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="assets/Istiaque_Ahmed_CV.pdf" class="btn btn-outline" download>
+                            <span>Download CV</span>
+                            <svg class="btn-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 3.333v9.167M6.667 9.167L10 12.5l3.333-3.333M4.167 15.833h11.666"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
                     </div>
-                    <!-- Right Column: Highlights & Stats -->
-                    <div class="about-highlights">
-                        <h4 class="highlights-title">What I Bring</h4>
-                        <div class="highlights-list">
-                            <div class="highlight-item">
-                                <div class="highlight-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="highlight-content">
-                                    <h5>Agentic AI Development</h5>
-                                    <p>Building autonomous AI systems with LangChain, LangGraph, and multi-agent
-                                        architectures</p>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor"
-                                            stroke-width="1.5" />
-                                        <path d="M8 21H16M12 17V21" stroke="currentColor" stroke-width="1.5"
-                                            stroke-linecap="round" />
-                                    </svg>
-                                </div>
-                                <div class="highlight-content">
-                                    <h5>Full-Stack AI Applications</h5>
-                                    <p>End-to-end development from model training to production deployment with FastAPI
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="highlight-item">
-                                <div class="highlight-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" />
-                                        <path
-                                            d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22"
-                                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                    </svg>
-                                </div>
-                                <div class="highlight-content">
-                                    <h5>Research & Innovation</h5>
-                                    <p>Deep learning research with focus on efficient architectures and edge deployment
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Stats Row -->
-                        <div class="about-stats-row">
-                            <div class="about-stat-item">
-                                <span class="stat-number">3+</span>
-                                <span class="stat-text">Years Experience</span>
-                            </div>
-                            <div class="stat-divider-v"></div>
-                            <div class="about-stat-item">
-                                <span class="stat-number">10+</span>
-                                <span class="stat-text">AI Projects</span>
-                            </div>
-                            <div class="stat-divider-v"></div>
-                            <div class="about-stat-item">
-                                <span class="stat-number">5+</span>
-                                <span class="stat-text">Production Apps</span>
-                            </div>
-                        </div>
+                </div>
+
+                <!-- Right Hero Illustration -->
+                <div class="hero-right">
+                    <div class="hero-illustration-wrapper">
+                        <img src="assets/hero-illustration.svg" alt="Developer sitting on beanbag working on laptop"
+                            class="hero-illustration-img">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="section skills-section" id="skills">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">Expertise</span>
-                    <h2 class="section-title">Technical <span class="text-accent">Skills</span></h2>
-                    <p class="section-subtitle">A comprehensive toolkit for building advanced AI systems</p>
+        <!-- About Me Section -->
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
+                <!-- Left Illustration -->
+                <div class="about-left">
+                    <div class="about-illustration-wrapper">
+                        <img src="assets/about-illustration.svg" alt="Developer with coffee by window"
+                            class="about-illustration-img">
+                    </div>
                 </div>
-                <div class="skills-container">
-                    <!-- Agentic AI & LLMs -->
-                    <div class="skill-category">
-                        <div class="skill-category-header">
-                            <div class="skill-category-icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                            <h3 class="skill-category-title">Agentic AI & LLMs</h3>
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag skill-tag-primary">LangChain</span>
-                            <span class="skill-tag skill-tag-primary">LangGraph</span>
-                            <span class="skill-tag skill-tag-primary">OpenAI</span>
-                            <span class="skill-tag skill-tag-primary">Gemini</span>
-                            <span class="skill-tag">PydanticAI</span>
-                            <span class="skill-tag">LlamaIndex</span>
-                            <span class="skill-tag">AutoGen</span>
-                            <span class="skill-tag">RAG Pipelines</span>
-                            <span class="skill-tag">ChromaDB</span>
-                            <span class="skill-tag">Pinecone</span>
-                            <span class="skill-tag">Anthropic</span>
-                        </div>
+
+                <!-- Right Bio & Traits -->
+                <div class="about-right">
+                    <div class="section-title-wrap">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="title-accent-dash"></div>
                     </div>
-                    <!-- Deep Learning -->
-                    <div class="skill-category">
-                        <div class="skill-category-header">
-                            <div class="skill-category-icon">
+
+                    <p class="about-description">
+                        Passionate about creating clean, efficient and scalable solutions with great user experiences.
+                        I love working with cutting-edge technologies that push AI and modern web engineering forward.
+                    </p>
+
+                    <!-- Trait Badges Grid (2x3) -->
+                    <div class="traits-grid">
+                        <!-- Trait 1 -->
+                        <div class="trait-card">
+                            <div class="trait-icon">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" />
                                     <path
-                                        d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22"
-                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                                        d="M9 18h6M10 22h4M12 2a7 7 0 0 0-7 7c0 2.6 1.4 4.8 3.5 6h7c2.1-1.2 3.5-3.4 3.5-6a7 7 0 0 0-7-7z"
+                                        stroke="#E86034" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="skill-category-title">Deep Learning & Research</h3>
+                            <span class="trait-text">Problem Solver</span>
                         </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag skill-tag-primary">PyTorch</span>
-                            <span class="skill-tag skill-tag-primary">Transformers</span>
-                            <span class="skill-tag skill-tag-primary">Hugging Face</span>
-                            <span class="skill-tag">NumPy</span>
-                            <span class="skill-tag">Pandas</span>
-                            <span class="skill-tag">SciPy</span>
-                            <span class="skill-tag">OpenCV</span>
-                            <span class="skill-tag">CNN Architectures</span>
-                            <span class="skill-tag">Librosa</span>
-                            <span class="skill-tag">Torchaudio</span>
-                        </div>
-                    </div>
-                    <!-- Backend Engineering -->
-                    <div class="skill-category">
-                        <div class="skill-category-header">
-                            <div class="skill-category-icon">
+
+                        <!-- Trait 2 -->
+                        <div class="trait-card">
+                            <div class="trait-icon">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor"
-                                        stroke-width="1.5" />
-                                    <path d="M8 21H16M12 17V21" stroke="currentColor" stroke-width="1.5"
+                                    <circle cx="12" cy="12" r="10" stroke="#E86034" stroke-width="2" />
+                                    <circle cx="12" cy="12" r="6" stroke="#E86034" stroke-width="2" />
+                                    <circle cx="12" cy="12" r="2" fill="#E86034" />
+                                </svg>
+                            </div>
+                            <span class="trait-text">Detail Oriented</span>
+                        </div>
+
+                        <!-- Trait 3 -->
+                        <div class="trait-card">
+                            <div class="trait-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="#E86034" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <span class="trait-text">Clean Code Advocate</span>
+                        </div>
+
+                        <!-- Trait 4 -->
+                        <div class="trait-card">
+                            <div class="trait-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z"
+                                        stroke="#E86034" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <span class="trait-text">Always Learning</span>
+                        </div>
+
+                        <!-- Trait 5 -->
+                        <div class="trait-card">
+                            <div class="trait-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#E86034"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="9" cy="7" r="4" stroke="#E86034" stroke-width="2" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#E86034"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <span class="trait-text">Team Player</span>
+                        </div>
+
+                        <!-- Trait 6 -->
+                        <div class="trait-card">
+                            <div class="trait-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4 21l3.5-.95A8.94 8.94 0 0 0 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z"
+                                        stroke="#E86034" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M12 8v5M12 16h.01" stroke="#E86034" stroke-width="2.2"
                                         stroke-linecap="round" />
                                 </svg>
                             </div>
-                            <h3 class="skill-category-title">Backend Engineering</h3>
-                        </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag skill-tag-primary">FastAPI</span>
-                            <span class="skill-tag skill-tag-primary">Python</span>
-                            <span class="skill-tag skill-tag-primary">MongoDB</span>
-                            <span class="skill-tag skill-tag-primary">PostgreSQL</span>
-                            <span class="skill-tag">Pydantic</span>
-                            <span class="skill-tag">WebSockets</span>
-                            <span class="skill-tag">REST APIs</span>
-                            <span class="skill-tag">AsyncIO</span>
-                            <span class="skill-tag">JWT</span>
-                            <span class="skill-tag">OAuth2</span>
+                            <span class="trait-text">Curious Mind</span>
                         </div>
                     </div>
-                    <!-- DevOps & Tools -->
-                    <div class="skill-category">
-                        <div class="skill-category-header">
-                            <div class="skill-category-icon">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
-                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                            <h3 class="skill-category-title">DevOps & Tools</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Technologies Section -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <div class="title-accent-dash"></div>
+                </div>
+
+                <!-- Skills Badges Grid -->
+                <div class="skills-grid">
+                    <!-- Python -->
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-svg">
+                                <path
+                                    d="M11.9 2c-3.1 0-4.9.4-4.9 1.8v2.7h5v.9H4.9C3.1 7.4 2 8.7 2 11.2s1.1 3.8 2.9 3.8h1.8v-2.3c0-1.8 1.6-3.2 3.4-3.2h5.1c1.5 0 2.7-1.2 2.7-2.7V4.7C17.9 2.4 15 2 11.9 2zm-1.8 1.4a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8z"
+                                    fill="currentColor" />
+                                <path
+                                    d="M12.1 22c3.1 0 4.9-.4 4.9-1.8v-2.7h-5v-.9h7.1c1.8 0 2.9-1.3 2.9-3.8s-1.1-3.8-2.9-3.8h-1.8v2.3c0 1.8-1.6 3.2-3.4 3.2H8.8c-1.5 0-2.7 1.2-2.7 2.7v2.1c0 2.3 2.9 2.7 6 2.7zm1.8-1.4a.9.9 0 1 1 0-1.8.9.9 0 0 1 0 1.8z"
+                                    fill="currentColor" />
+                            </svg>
                         </div>
-                        <div class="skill-tags">
-                            <span class="skill-tag skill-tag-primary">Docker</span>
-                            <span class="skill-tag skill-tag-primary">Git</span>
-                            <span class="skill-tag skill-tag-primary">Linux</span>
-                            <span class="skill-tag">GitHub Actions</span>
-                            <span class="skill-tag">Bash Scripting</span>
-                            <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">Jupyter</span>
-                            <span class="skill-tag">RegEx</span>
+                        <span class="skill-name">Python</span>
+                    </div>
+
+                    <!-- FastAPI -->
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M13 6l-5 7h4l-1 5 5-7h-4l1-5z" fill="currentColor" />
+                            </svg>
+                        </div>
+                        <span class="skill-name">FastAPI</span>
+                    </div>
+
+                    <!-- LangChain & Agents -->
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-svg">
+                                <circle cx="6" cy="6" r="3" stroke="currentColor" stroke-width="2" />
+                                <circle cx="18" cy="6" r="3" stroke="currentColor" stroke-width="2" />
+                                <circle cx="12" cy="18" r="3" stroke="currentColor" stroke-width="2" />
+                                <path d="M8.5 7.5l7 0M7.5 8.5l3 7M16.5 8.5l-3 7" stroke="currentColor"
+                                    stroke-width="1.8" />
+                            </svg>
+                        </div>
+                        <span class="skill-name">LangChain</span>
+                    </div>
+
+                    <!-- PyTorch / Deep Learning -->
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-svg">
+                                <path
+                                    d="M13.5 3.5a1 1 0 0 1 1.4 0l4.5 4.5a8 8 0 1 1-11.3 0l1.4-1.4 2.5 2.5a4.5 4.5 0 1 0 6.4 0L13.5 3.5z"
+                                    stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                                <circle cx="17" cy="5" r="1.5" fill="#E86034" />
+                            </svg>
+                        </div>
+                        <span class="skill-name">PyTorch</span>
+                    </div>
+
+                    <!-- OpenAI / LLMs -->
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-svg">
+                                <path
+                                    d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2zM19 16l1.2 3.3L23.5 20.5l-3.3 1.2L19 25l-1.2-3.3-3.3-1.2 3.3-1.2L19 16z"
+                                    fill="currentColor" />
+                            </svg>
+                        </div>
+                        <span class="skill-name">OpenAI API</span>
+                    </div>
+
+                    <!-- MongoDB -->
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-svg">
+                                <path
+                                    d="M12 2c-.5 2.5-4 5.5-4 10 0 4.2 3 7.8 4 9.5 1-1.7 4-5.3 4-9.5 0-4.5-3.5-7.5-4-10z"
+                                    stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                                <line x1="12" y1="2" x2="12" y2="21.5" stroke="currentColor" stroke-width="1.8" />
+                            </svg>
+                        </div>
+                        <span class="skill-name">MongoDB</span>
+                    </div>
+
+                    <!-- PostgreSQL / SQL -->
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-svg">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" stroke="currentColor" stroke-width="2" />
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" stroke="currentColor" stroke-width="2" />
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" stroke="currentColor"
+                                    stroke-width="2" />
+                            </svg>
+                        </div>
+                        <span class="skill-name">PostgreSQL</span>
+                    </div>
+
+                    <!-- Docker -->
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-svg">
+                                <path
+                                    d="M2 13.5c1 3.5 4.5 6 9.5 6 7 0 10.5-4.5 10.5-9.5 0-.5-.1-1-.1-1.5-1-.2-2.5.2-3.4 1.2-1-1-2.5-1.5-4-1.2V7h-3v2H8V7H5v4H2v2.5z"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                                <rect x="5" y="9.5" width="2" height="2" fill="currentColor" />
+                                <rect x="8" y="9.5" width="2" height="2" fill="currentColor" />
+                                <rect x="11" y="9.5" width="2" height="2" fill="currentColor" />
+                            </svg>
+                        </div>
+                        <span class="skill-name">Docker</span>
+                    </div>
+
+                    <!-- Git & GitHub -->
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="skill-svg">
+                                <circle cx="6" cy="6" r="3" stroke="currentColor" stroke-width="2" />
+                                <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2" />
+                                <circle cx="18" cy="9" r="3" stroke="currentColor" stroke-width="2" />
+                                <line x1="6" y1="9" x2="6" y2="15" stroke="currentColor" stroke-width="2" />
+                                <path d="M9 6h3a6 6 0 0 1 6 6v0" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <span class="skill-name">Git & GitHub</span>
+                    </div>
+
+                    <!-- More Skills Button / Card -->
+                    <div class="skill-card skill-card-more" id="btn-more-skills">
+                        <div class="skill-icon-wrap">
+                            <span class="more-dots">•••</span>
+                        </div>
+                        <span class="skill-name">More</span>
+                    </div>
+                </div>
+
+                <!-- Extended Skills Drawer / Details (Toggleable) -->
+                <div class="skills-extended" id="skills-extended">
+                    <div class="extended-category">
+                        <h4>AI & Machine Learning</h4>
+                        <p>LangGraph · PydanticAI · LlamaIndex · RAG Pipelines · ChromaDB · Pinecone · Transformers ·
+                            Hugging Face · OpenCV · Scikit-Learn</p>
+                    </div>
+                    <div class="extended-category">
+                        <h4>Backend & Architecture</h4>
+                        <p>FastAPI · Python · AsyncIO · WebSockets · SQLAlchemy · REST APIs · JWT Auth · Google OAuth ·
+                            Microservices</p>
+                    </div>
+                    <div class="extended-category">
+                        <h4>DevOps & Tools</h4>
+                        <p>Docker · GitHub Actions · Linux / Bash · Postman · Jupyter Notebooks · VS Code · Gunicorn ·
+                            Uvicorn</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Work / Featured Projects Section -->
+        <section class="section work-section" id="work">
+            <div class="container">
+                <!-- Section Header with Right Link -->
+                <div class="section-header-flex">
+                    <div class="section-title-wrap">
+                        <h2 class="section-title">Selected Work</h2>
+                        <div class="title-accent-dash"></div>
+                    </div>
+                    <a href="https://github.com/IstiaqueAhmd" target="_blank" class="view-all-link">
+                        <span>View All Projects</span>
+                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.166 10h11.667M10.833 5l5 5-5 5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Projects Cards Grid (3-column) -->
+                <div class="projects-grid">
+                    <!-- Project 1: Legal Sherpa -->
+                    <div class="project-card">
+                        <div class="project-preview-box">
+                            <!-- Device Mockup: Monitor / Laptop Preview -->
+                            <div class="mockup-screen">
+                                <div class="mockup-header">
+                                    <div class="mockup-dot"></div>
+                                    <div class="mockup-dot"></div>
+                                    <div class="mockup-dot"></div>
+                                    <span class="mockup-url">legalsherpa.cloud</span>
+                                </div>
+                                <div class="mockup-content mockup-chat-ui">
+                                    <div class="mockup-sidebar">
+                                        <div class="mockup-line w-75"></div>
+                                        <div class="mockup-line w-50"></div>
+                                        <div class="mockup-line w-60"></div>
+                                    </div>
+                                    <div class="mockup-main">
+                                        <div class="mockup-bubble user-bubble">Draft legal contract review</div>
+                                        <div class="mockup-bubble ai-bubble">
+                                            <span class="ai-tag-mini">RAG Verified</span>
+                                            Clause 4.2 compliance analysis complete.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-body">
+                            <div class="project-title-row">
+                                <h3 class="project-title">Legal Sherpa</h3>
+                                <a href="https://legalsherpa.cloud/" target="_blank" class="project-ext-link"
+                                    aria-label="View Legal Sherpa live">
+                                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 15L15 5M15 5H7.5M15 5V12.5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <p class="project-desc">
+                                Production AI legal assistant with RAG pipeline, ChromaDB semantic search, multi-session
+                                chat, and role-based document access.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>FastAPI</span>
+                                <span>·</span>
+                                <span>OpenAI</span>
+                                <span>·</span>
+                                <span>ChromaDB</span>
+                                <span>·</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Auto-Attendance -->
+                    <div class="project-card">
+                        <div class="project-preview-box">
+                            <!-- Device Mockup: Dashboard Analytics Monitor -->
+                            <div class="mockup-screen">
+                                <div class="mockup-header">
+                                    <div class="mockup-dot"></div>
+                                    <div class="mockup-dot"></div>
+                                    <div class="mockup-dot"></div>
+                                    <span class="mockup-url">auto-attendance.live</span>
+                                </div>
+                                <div class="mockup-content mockup-dashboard-ui">
+                                    <div class="mockup-stat-card">
+                                        <div class="stat-circle">99.4%</div>
+                                        <div class="mockup-line w-60"></div>
+                                    </div>
+                                    <div class="mockup-chart-area">
+                                        <div class="chart-bar h-40"></div>
+                                        <div class="chart-bar h-70"></div>
+                                        <div class="chart-bar h-55"></div>
+                                        <div class="chart-bar h-90 active"></div>
+                                        <div class="chart-bar h-65"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-body">
+                            <div class="project-title-row">
+                                <h3 class="project-title">Auto-Attendance</h3>
+                                <a href="https://github.com/IstiaqueAhmd" target="_blank" class="project-ext-link"
+                                    aria-label="View Auto Attendance code">
+                                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 15L15 5M15 5H7.5M15 5V12.5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <p class="project-desc">
+                                Automated face recognition attendance engine built with InsightFace, ONNX Runtime, and
+                                live WebSocket camera streams.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>FastAPI</span>
+                                <span>·</span>
+                                <span>InsightFace</span>
+                                <span>·</span>
+                                <span>OpenCV</span>
+                                <span>·</span>
+                                <span>WebSocket</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: FactFlow -->
+                    <div class="project-card">
+                        <div class="project-preview-box">
+                            <!-- Device Mockup: Mobile Phone / Clean Verification UI -->
+                            <div class="mockup-phone">
+                                <div class="phone-notch"></div>
+                                <div class="phone-content">
+                                    <div class="phone-header-line">FactFlow Verified</div>
+                                    <div class="phone-verdict-badge">
+                                        <span class="badge-dot"></span> TRUE (98.2%)
+                                    </div>
+                                    <div class="mockup-line w-80"></div>
+                                    <div class="mockup-line w-60"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-body">
+                            <div class="project-title-row">
+                                <h3 class="project-title">FactFlow</h3>
+                                <a href="https://github.com/IstiaqueAhmd" target="_blank" class="project-ext-link"
+                                    aria-label="View FactFlow on GitHub">
+                                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 15L15 5M15 5H7.5M15 5V12.5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <p class="project-desc">
+                                Multi-modal AI fact-checking application verifying claims across text, images (GPT-4V),
+                                PDFs, and live Tavily search queries.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>FastAPI</span>
+                                <span>·</span>
+                                <span>GPT-4V</span>
+                                <span>·</span>
+                                <span>Tavily</span>
+                                <span>·</span>
+                                <span>MongoDB</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -371,475 +566,337 @@
 
         <!-- Experience Section -->
         <section class="section experience-section" id="experience">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">Career</span>
-                    <h2 class="section-title">Professional <span class="text-accent">Experience</span></h2>
-                    <p class="section-subtitle">Building impactful AI solutions in industry and research</p>
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="title-accent-dash"></div>
                 </div>
-                <div class="timeline">
+
+                <!-- Horizontal Experience Timeline -->
+                <div class="experience-timeline">
                     <!-- Experience 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <div class="timeline-info">
-                                    <h3 class="timeline-title">Data Scientist</h3>
-                                    <span class="timeline-company">Join Venture AI</span>
-                                </div>
-                                <span class="timeline-date">2024 - Present</span>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="timeline-description">
-                                    Developing and deploying production-grade AI applications, from NLP pipelines to
-                                    real-time voice solutions.
-                                </p>
-                                <ul class="timeline-achievements">
-                                    <li>Built end-to-end AI apps including chatbots, recommendation systems, and Voice
-                                        AI solutions</li>
-                                    <li>Architected scalable backends with FastAPI, MongoDB, and WebSockets for
-                                        real-time AI agents</li>
-                                    <li>Implemented transformer models with vector databases for document retrieval and
-                                        summarization</li>
-                                    <li>Integrated APIs (Twilio, Meta, Dropbox, Google Trends) for data ingestion and
-                                        automation</li>
-                                </ul>
-                                <div class="timeline-tech">
-                                    <span>Python</span>
-                                    <span>FastAPI</span>
-                                    <span>MongoDB</span>
-                                    <span>LangChain</span>
-                                    <span>OpenAI</span>
-                                </div>
+                    <div class="exp-card">
+                        <div class="exp-date-badge">2024 - Present</div>
+                        <div class="exp-icon-node">
+                            <div class="node-circle">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" stroke="currentColor"
+                                        stroke-width="2" />
+                                </svg>
                             </div>
                         </div>
+                        <h3 class="exp-role">Data Scientist</h3>
+                        <p class="exp-company">Join Venture AI</p>
+                        <p class="exp-desc">
+                            Building scalable AI backends, RAG pipelines, voice AI agents, and production microservices
+                            with FastAPI and LangChain.
+                        </p>
+                    </div>
+
+                    <div class="exp-connector"></div>
+
+                    <!-- Experience 2 -->
+                    <div class="exp-card">
+                        <div class="exp-date-badge">2023 - 2024</div>
+                        <div class="exp-icon-node">
+                            <div class="node-circle">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="exp-role">Full Stack & AI Intern</h3>
+                        <p class="exp-company">Research & Industry Labs</p>
+                        <p class="exp-desc">
+                            Worked on real-world deep learning research, edge-optimized neural architectures, and
+                            scalable REST APIs.
+                        </p>
+                    </div>
+
+                    <div class="exp-connector"></div>
+
+                    <!-- Experience 3 -->
+                    <div class="exp-card">
+                        <div class="exp-date-badge">2022 - 2023</div>
+                        <div class="exp-icon-node">
+                            <div class="node-circle">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                                    <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="currentColor"
+                                        stroke-width="2" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="exp-role">Freelance AI Developer</h3>
+                        <p class="exp-company">Self Employed</p>
+                        <p class="exp-desc">
+                            Delivered intelligent automation bots, NLP scripts, and full-stack solutions for global
+                            clients and startups.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section class="section services-section" id="projects">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">Portfolio</span>
-                    <h2 class="section-title">Featured <span class="text-accent">Projects</span></h2>
-                    <p class="section-subtitle">Building intelligent systems that solve real-world problems</p>
+        <!-- My Process Section -->
+        <section class="section process-section" id="process">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">My Process</h2>
+                    <div class="title-accent-dash"></div>
                 </div>
-                <div class="services-grid">
-                    <!-- Project 1: Legal Sherpa -->
-                    <div class="service-card service-card-featured">
-                        <div class="service-icon">
+
+                <!-- Process Steps Grid with Dotted Connections -->
+                <div class="process-flow">
+                    <!-- Step 01: Discover -->
+                    <div class="process-step">
+                        <div class="process-icon-badge">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <circle cx="11" cy="11" r="8" stroke="#E86034" stroke-width="2" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#E86034" stroke-width="2"
+                                    stroke-linecap="round" />
                             </svg>
                         </div>
-                        <span class="service-tag">Production RAG System</span>
-                        <h3 class="service-title">Legal Sherpa</h3>
-                        <p class="service-description">
-                            Full-featured AI legal chatbot built with FastAPI and OpenAI GPT. Implements a complete RAG
-                            pipeline where lawyers upload PDF/DOCX/TXT documents which are processed, chunked, and
-                            stored
-                            in ChromaDB for semantic search. Users receive context-aware legal information powered by
-                            the
-                            knowledge base. Features comprehensive auth (JWT + Google OAuth + OTP verification),
-                            role-based admin access for document management, multi-session chat with persistent history
-                            in PostgreSQL, and auto-generated session titles. Deployed to production with
-                            environment-based
-                            config and CORS handling.
-                        </p>
-                        <div class="project-tech">
-                            <span>FastAPI</span>
-                            <span>OpenAI</span>
-                            <span>ChromaDB</span>
-                            <span>PostgreSQL</span>
-                            <span>SQLAlchemy</span>
-                            <span>JWT/OAuth</span>
-                        </div>
-                        <a href="https://legalsherpa.cloud/" target="_blank" class="service-link">
-                            <span>View Live: legalsherpa.com</span>
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
+                        <span class="step-number">01</span>
+                        <h3 class="step-title">Discover</h3>
+                        <p class="step-desc">Understand the problem deeply.</p>
                     </div>
-                    <!-- Project 2: Auto-Attendance -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5" />
-                                <path d="M4 20C4 16.6863 7.58172 14 12 14C16.4183 14 20 16.6863 20 20"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                                <path d="M15 11L17 13L21 9" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <span class="service-tag">Computer Vision</span>
-                        <h3 class="service-title">Auto-Attendance</h3>
-                        <p class="service-description">
-                            Automated face recognition attendance system built with FastAPI and InsightFace using ONNX
-                            Runtime. Handles face registration by encoding and storing face embeddings in PostgreSQL.
-                            Recognition engine processes static images, video files, or live camera feeds via WebSocket
-                            connections. Features modular architecture with separated API routes, core
-                            detection/matching
-                            logic, and async SQLAlchemy 2.0 data layer. Automatically logs attendance records with
-                            querying and reporting capabilities.
-                        </p>
-                        <div class="project-tech">
-                            <span>FastAPI</span>
-                            <span>InsightFace</span>
-                            <span>OpenCV</span>
-                            <span>WebSocket</span>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <a href="https://github.com/IstiaqueAhmd" target="_blank" class="service-link">
-                            <span>View Project</span>
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-                    <!-- Project 3: FactFlow -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 11L12 14L22 4" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <span class="service-tag">Fact Verification</span>
-                        <h3 class="service-title">FactFlow</h3>
-                        <p class="service-description">
-                            AI-powered fact-checking application using OpenAI GPT and Tavily search API. Verifies claims
-                            from multiple sources: plain text, images (GPT-4V vision), PDF/Word documents (PyPDF2), and
-                            URLs (Trafilatura, Newspaper3k, BeautifulSoup). Returns structured verdicts
-                            (TRUE/FALSE/UNVERIFIABLE)
-                            with confidence scores, evidence summaries, and cited sources. Features JWT authentication
-                            and
-                            MongoDB history for past verifications.
-                        </p>
-                        <div class="project-tech">
-                            <span>FastAPI</span>
-                            <span>GPT-4</span>
-                            <span>Tavily</span>
-                            <span>MongoDB</span>
-                            <span>JWT</span>
-                        </div>
-                        <a href="https://github.com/IstiaqueAhmd" target="_blank" class="service-link">
-                            <span>View Project</span>
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-                    <!-- Project 4 -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <span class="service-tag">Agentic AI</span>
-                        <h3 class="service-title">AI Consultant API</h3>
-                        <p class="service-description">
-                            Autonomous system that dynamically switches between consultant and resource-provider roles.
-                            Features semantic audio search powered by ChromaDB for intelligent document retrieval.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>FastAPI</span>
-                            <span>OpenAI</span>
-                            <span>ChromaDB</span>
-                        </div>
-                        <a href="https://github.com/IstiaqueAhmd" target="_blank" class="service-link">
-                            <span>View Project</span>
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-                    <!-- Project 3 -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <span class="service-tag">Multi-Agent</span>
-                        <h3 class="service-title">Couple Counselor Bot</h3>
-                        <p class="service-description">
-                            Multi-agent counseling system with shared contextual memory. Real-time encrypted WebSocket
-                            chat with Gemini-based reasoning for empathetic, intelligent responses.
-                        </p>
-                        <div class="project-tech">
-                            <span>FastAPI</span>
-                            <span>Gemini API</span>
-                            <span>WebSocket</span>
-                        </div>
-                        <a href="https://github.com/IstiaqueAhmd" target="_blank" class="service-link">
-                            <span>View Project</span>
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
-                    <!-- Project 4: Veloo-ai -->
-                    <div class="service-card">
-                        <div class="service-icon">
+
+                    <div class="process-dotted-line"></div>
+
+                    <!-- Step 02: Design -->
+                    <div class="process-step">
+                        <div class="process-icon-badge">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
-                                    d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M14 2V8H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M12 18V12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M9 15H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                                    d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"
+                                    stroke="#E86034" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <span class="service-tag">AI Tool Calling</span>
-                        <h3 class="service-title">Veloo-ai</h3>
-                        <p class="service-description">
-                            AI-powered quotation and inventory management system for construction and service
-                            businesses.
-                            Uses OpenAI tool calling to automatically query inventory for real-time pricing and
-                            availability
-                            when generating quotations. Features offer management with status tracking, material
-                            inventory
-                            with low-stock monitoring, and integrated email generation for customers and suppliers via
-                            Gmail SMTP. Production-ready with Gunicorn deployment.
-                        </p>
-                        <div class="project-tech">
-                            <span>FastAPI</span>
-                            <span>OpenAI</span>
-                            <span>MongoDB</span>
-                            <span>Pydantic</span>
-                        </div>
-                        <a href="https://github.com/IstiaqueAhmd" target="_blank" class="service-link">
-                            <span>View Project</span>
+                        <span class="step-number">02</span>
+                        <h3 class="step-title">Design</h3>
+                        <p class="step-desc">Plan and craft simple solutions.</p>
+                    </div>
+
+                    <div class="process-dotted-line"></div>
+
+                    <!-- Step 03: Develop -->
+                    <div class="process-step">
+                        <div class="process-icon-badge">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="#E86034" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </a>
+                        </div>
+                        <span class="step-number">03</span>
+                        <h3 class="step-title">Develop</h3>
+                        <p class="step-desc">Write clean code and build features.</p>
                     </div>
-                    <!-- Project 7: GetAvails AI Server -->
-                    <div class="service-card">
-                        <div class="service-icon">
+
+                    <div class="process-dotted-line"></div>
+
+                    <!-- Step 04: Deploy -->
+                    <div class="process-step">
+                        <div class="process-icon-badge">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
-                                    d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <circle cx="12" cy="7" r="2" stroke="currentColor" stroke-width="1.5" />
+                                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09zM12 15l-3-3M9 12l2.5-2.5M14 7l-2.5 2.5"
+                                    stroke="#E86034" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M9 12c-1.5-1.5-2-4-2-4s4 .5 6 2l6-6c1-1 2.5-1 3.5 0s1 2.5 0 3.5l-6 6c1.5 2 2 6 2 6s-2.5-.5-4-2l-3-3z"
+                                    stroke="#E86034" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <span class="service-tag">Agentic AI / Travel</span>
-                        <h3 class="service-title">GetAvails AI Server</h3>
-                        <p class="service-description">
-                            FastAPI backend powering an AI tour guide chatbot for the GetAvails talent booking platform.
-                            Uses LangChain and LangGraph for agentic behavior with OpenAI GPT, featuring flight search
-                            via Amadeus API, airport lookup, and destination tips tools. Implements JWT authentication,
-                            multi-session chat with PostgreSQL persistence, auto-generated titles, and admin dashboard
-                            with analytics, error logging, and configurable chat settings.
-                        </p>
-                        <div class="project-tech">
-                            <span>FastAPI</span>
-                            <span>LangGraph</span>
-                            <span>OpenAI</span>
-                            <span>Amadeus API</span>
-                            <span>PostgreSQL</span>
-                            <span>JWT</span>
-                        </div>
-                        <a href="https://www.getavails.com/" target="_blank" class="service-link">
-                            <span>View Live: getavails.com</span>
+                        <span class="step-number">04</span>
+                        <h3 class="step-title">Deploy</h3>
+                        <p class="step-desc">Test thoroughly and launch.</p>
+                    </div>
+
+                    <div class="process-dotted-line"></div>
+
+                    <!-- Step 05: Improve -->
+                    <div class="process-step">
+                        <div class="process-icon-badge">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                <path d="M23 6l-9.5 9.5-5-5L1 18" stroke="#E86034" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M17 6h6v6" stroke="#E86034" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
-                        </a>
+                        </div>
+                        <span class="step-number">05</span>
+                        <h3 class="step-title">Improve</h3>
+                        <p class="step-desc">Monitor, iterate and improve.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="section contact-section" id="contact">
-            <div class="section-container">
-                <div class="section-header">
-                    <span class="section-tag">Get In Touch</span>
-                    <h2 class="section-title">Contact <span class="text-accent">Me</span></h2>
-                    <p class="section-subtitle">Ready to transform your business with AI? Let's talk.</p>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-info">
+        <!-- Footer / Contact Banner Section -->
+        <footer class="footer-section" id="contact">
+            <div class="container">
+                <!-- Warm Peach / Off-White Callout Box -->
+                <div class="contact-card-banner">
+                    <!-- Left Headline -->
+                    <div class="contact-banner-left">
+                        <h2 class="contact-headline">
+                            Let's build something <br>
+                            meaningful <span class="highlight-orange">together.</span>
+                        </h2>
+                        <div class="contact-headline-dash"></div>
+                    </div>
+
+                    <!-- Middle Info Items -->
+                    <div class="contact-banner-mid">
                         <!-- Email -->
-                        <div class="contact-item">
-                            <div class="contact-icon">
+                        <div class="contact-info-row">
+                            <div class="contact-icon-mini">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
-                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                        stroke="#18181b" stroke-width="1.8" stroke-linecap="round"
                                         stroke-linejoin="round" />
-                                    <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M22 6l-10 7L2 6" stroke="#18181b" stroke-width="1.8" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Email</span>
-                                <a href="mailto:istiaque.inbox@gmail.com"
-                                    class="contact-value">istiaque.inbox@gmail.com</a>
-                            </div>
+                            <a href="mailto:istiaque.inbox@gmail.com" class="contact-link-text" id="copy-email-btn"
+                                title="Click to copy or send email">
+                                istiaque.inbox@gmail.com
+                            </a>
                         </div>
+
                         <!-- Phone -->
-                        <div class="contact-item">
-                            <div class="contact-icon">
+                        <div class="contact-info-row">
+                            <div class="contact-icon-mini">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77383 17.3147 6.72533 15.2662 5.19 12.85C3.49998 10.2412 2.44824 7.27099 2.12 4.18C2.09501 3.90347 2.12787 3.62476 2.2165 3.36162C2.30513 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.11 2H7.11C7.59531 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04208 3.23945 9.11 3.72C9.23662 4.68007 9.47145 5.62273 9.81 6.53C9.94455 6.88792 9.97366 7.27691 9.89391 7.65088C9.81415 8.02485 9.62886 8.36811 9.36 8.64L8.09 9.91C9.51356 12.4135 11.5865 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9752 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z"
-                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                        stroke="#18181b" stroke-width="1.8" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Phone</span>
-                                <a href="tel:+8801853380267" class="contact-value">+8801853380267</a>
-                            </div>
+                            <a href="tel:+8801853380267" class="contact-link-text">+880 185 338 0267</a>
                         </div>
-                        <!-- LinkedIn -->
-                        <div class="contact-item">
-                            <div class="contact-icon">
+
+                        <!-- Location -->
+                        <div class="contact-info-row">
+                            <div class="contact-icon-mini">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                                        stroke="#18181b" stroke-width="1.8" stroke-linecap="round"
                                         stroke-linejoin="round" />
-                                    <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="12" cy="10" r="3" stroke="#18181b" stroke-width="1.8" />
                                 </svg>
                             </div>
-                            <div class="contact-details">
-                                <span class="contact-label">LinkedIn</span>
-                                <a href="https://linkedin.com/in/istiaque-ahmd" target="_blank"
-                                    class="contact-value">istiaque-ahmd</a>
-                            </div>
+                            <span class="contact-plain-text">Dhaka, Bangladesh</span>
                         </div>
-                        <!-- GitHub -->
-                        <div class="contact-item">
-                            <div class="contact-icon">
+                    </div>
+
+                    <!-- Right Social Connect -->
+                    <div class="contact-banner-right">
+                        <span class="connect-label">Let's Connect</span>
+                        <div class="social-links-row">
+                            <!-- GitHub -->
+                            <a href="https://github.com/IstiaqueAhmd" target="_blank" class="social-icon-btn"
+                                aria-label="GitHub Profile">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" />
                                 </svg>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">GitHub</span>
-                                <a href="https://github.com/IstiaqueAhmd" target="_blank"
-                                    class="contact-value">IstiaqueAhmd</a>
-                            </div>
-                        </div>
-                        <!-- Location -->
-                        <div class="contact-item">
-                            <div class="contact-icon">
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://linkedin.com/in/istiaque-ahmd" target="_blank" class="social-icon-btn"
+                                aria-label="LinkedIn Profile">
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
-                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" />
-                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5" />
+                                    <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" />
+                                    <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" />
                                 </svg>
-                            </div>
-                            <div class="contact-details">
-                                <span class="contact-label">Location</span>
-                                <span class="contact-value">Dhaka, Bangladesh</span>
-                            </div>
+                            </a>
+
+                            <!-- Twitter / X -->
+                            <a href="https://twitter.com" target="_blank" class="social-icon-btn"
+                                aria-label="Twitter / X Profile">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+
+                            <!-- Mail -->
+                            <a href="mailto:istiaque.inbox@gmail.com" class="social-icon-btn" aria-label="Send Direct Email">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
-                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/mqeqyvqn" method="POST">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
-                            <label for="name" class="form-label">Your Name</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
-                            <label for="email" class="form-label">Email Address</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" class="form-input" placeholder=" " required>
-                            <label for="subject" class="form-label">Subject</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" class="form-input form-textarea" placeholder=" "
-                                required></textarea>
-                            <label for="message" class="form-label">Your Message</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <span>Send Message</span>
-                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </form>
                 </div>
-            </div>
-        </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-brand">
-                    <a href="#home" class="footer-logo">
-                        <span class="logo-text">ISTIAQUE</span>
-                    </a>
-                    <p class="footer-tagline">Thinking Ahead, Building For Changes</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2026 Istiaque Ahmed. All rights reserved.</p>
+                <!-- Copyright Bar -->
+                <div class="footer-copyright">
+                    <p>© 2026 Istiaque Ahmed. All rights reserved. <span class="heart-icon">🧡</span></p>
                 </div>
             </div>
         </footer>
     </main>
 
-    <!-- Floating Particles -->
-    <div class="particles" id="particles"></div>
+    <!-- Quick Message / Contact Modal -->
+    <div class="contact-modal" id="contact-modal" aria-hidden="true">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-dialog">
+            <button class="modal-close" id="modal-close" aria-label="Close Contact Modal">&times;</button>
+            <div class="modal-header">
+                <span class="modal-tag">Get in Touch</span>
+                <h3 class="modal-title">Send a Quick Message</h3>
+                <p class="modal-subtitle">Have a project in mind or want to collaborate? Leave a note!</p>
+            </div>
+            <form class="modal-form" id="modal-contact-form" action="https://formspree.io/f/mqeqyvqn" method="POST">
+                <div class="form-field">
+                    <label for="form-name">Your Name</label>
+                    <input type="text" id="form-name" name="name" placeholder="Ali Hamza / John Doe" required>
+                </div>
+                <div class="form-field">
+                    <label for="form-email">Your Email</label>
+                    <input type="email" id="form-email" name="email" placeholder="you@example.com" required>
+                </div>
+                <div class="form-field">
+                    <label for="form-message">Message</label>
+                    <textarea id="form-message" name="message" rows="4" placeholder="Tell me about your project or idea..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <span>Send Message</span>
+                    <svg class="btn-arrow-inline" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.166 10h11.667M10.833 5l5 5-5 5" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
 
+    <!-- Toast Notification for Email Copy -->
+    <div class="toast-notification" id="toast-notification">
+        <span>Email copied to clipboard!</span>
+    </div>
+
+    <!-- Scripts -->
     <script src="main.js"></script>
 </body>
 

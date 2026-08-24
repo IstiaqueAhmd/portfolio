@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 460" width="100%" height="100%" fill="none">
+  <!-- Defs & Filters for soft warmth -->
+  <defs>
+    <filter id="soft-shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#e86034" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Hanging Lamp from Ceiling -->
+  <g class="lamp-group">
+    <!-- Cord -->
+    <line x1="220" y1="0" x2="220" y2="70" stroke="#18181b" stroke-width="2.5" stroke-linecap="round" />
+    <!-- Lamp Shade -->
+    <path d="M195 95 L245 95 L235 70 L205 70 Z" fill="#ffffff" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round" />
+    <!-- Light Glow Bulb -->
+    <circle cx="220" cy="97" r="9" fill="#F97316" />
+    <!-- Light Rays / Dashes -->
+    <path d="M210 108 L204 116" stroke="#F97316" stroke-width="2" stroke-linecap="round" />
+    <path d="M220 110 L220 120" stroke="#F97316" stroke-width="2" stroke-linecap="round" />
+    <path d="M230 108 L236 116" stroke="#F97316" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Floating Bookshelf & Plant on Right Wall -->
+  <g class="shelf-group">
+    <!-- Shelf Board -->
+    <rect x="365" y="68" width="125" height="7" rx="3.5" fill="#18181b" />
+    <line x1="375" y1="75" x2="385" y2="87" stroke="#18181b" stroke-width="2" />
+    <line x1="475" y1="75" x2="465" y2="87" stroke="#18181b" stroke-width="2" />
+
+    <!-- Books on Shelf -->
+    <!-- Book 1 (Vertical) -->
+    <rect x="382" y="32" width="10" height="36" rx="2" fill="#ffffff" stroke="#18181b" stroke-width="2.2" />
+    <line x1="387" y1="36" x2="387" y2="60" stroke="#18181b" stroke-width="1.5" />
+    <!-- Book 2 (Vertical Orange) -->
+    <rect x="395" y="24" width="12" height="44" rx="2" fill="#E86034" stroke="#18181b" stroke-width="2.2" />
+    <!-- Book 3 (Leaning) -->
+    <g transform="translate(412, 68) rotate(16) translate(-412, -68)">
+      <rect x="408" y="28" width="10" height="40" rx="2" fill="#ffffff" stroke="#18181b" stroke-width="2.2" />
+    </g>
+
+    <!-- Plant Pot & Leaves -->
+    <path d="M440 48 L466 48 L461 68 L445 68 Z" fill="#E86034" stroke="#18181b" stroke-width="2.2" stroke-linejoin="round" />
+    <!-- Leaves -->
+    <path d="M453 48 Q440 32 444 18 Q458 30 453 48 Z" fill="#ffffff" stroke="#18181b" stroke-width="2" stroke-linejoin="round" />
+    <path d="M453 48 Q468 30 464 16 Q450 28 453 48 Z" fill="#ffffff" stroke="#18181b" stroke-width="2" stroke-linejoin="round" />
+    <path d="M453 48 Q453 22 454 10 Q457 26 453 48 Z" fill="#ffffff" stroke="#18181b" stroke-width="2" stroke-linejoin="round" />
+  </g>
+
+  <!-- Orange Beanbag Chair / Armchair -->
+  <g class="beanbag-group" filter="url(#soft-shadow)">
+    <!-- Backrest & Main Body of Beanbag -->
+    <path d="M330 180 
+             C360 130, 425 155, 435 220 
+             C445 285, 450 340, 415 385 
+             C380 430, 240 435, 205 400 
+             C180 375, 235 340, 255 310 
+             C275 280, 290 230, 330 180 Z" 
+          fill="#E86034" stroke="#18181b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+    
+    <!-- Beanbag Folds & Contour Lines -->
+    <path d="M360 170 C390 220, 395 300, 385 365" stroke="#18181b" stroke-width="2" stroke-linecap="round" fill="none" />
+    <path d="M410 240 C430 280, 420 335, 390 380" stroke="#18181b" stroke-width="2" stroke-linecap="round" fill="none" />
+    <path d="M280 345 C320 375, 360 385, 400 380" stroke="#18181b" stroke-width="2" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Person (Developer) Sitting -->
+  <g class="person-group">
+    <!-- Left Leg (Background Leg) -->
+    <!-- Thigh -->
+    <path d="M260 270 C240 270, 200 275, 175 280" stroke="#18181b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Shin / Lower Leg -->
+    <path d="M175 280 L145 365" stroke="#18181b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Left Shoe (Orange Accent) -->
+    <g class="shoe-left">
+      <path d="M140 365 L130 385 C122 390, 105 390, 102 385 C100 380, 115 370, 135 363 Z" fill="#E86034" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round" />
+      <path d="M100 386 L135 386" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" />
+      <path d="M98 388 L137 388" stroke="#18181b" stroke-width="2.2" stroke-linecap="round" />
+    </g>
+
+    <!-- Right Leg (Foreground Leg) -->
+    <!-- Thigh -->
+    <path d="M285 275 C260 275, 215 280, 195 288" stroke="#18181b" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Shin / Lower Leg -->
+    <path d="M195 288 L170 370" stroke="#18181b" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Right Shoe (Orange Accent) -->
+    <g class="shoe-right">
+      <path d="M165 370 L155 390 C145 395, 130 395, 126 390 C124 384, 140 373, 160 368 Z" fill="#E86034" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round" />
+      <path d="M125 391 L160 391" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" />
+      <path d="M123 393 L162 393" stroke="#18181b" stroke-width="2.2" stroke-linecap="round" />
+    </g>
+
+    <!-- Torso (White T-shirt) -->
+    <path d="M315 185 
+             C300 215, 280 260, 275 285 
+             C295 290, 335 280, 350 260 
+             C355 225, 345 190, 325 185 Z" 
+          fill="#ffffff" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round" />
+    <!-- T-shirt creases -->
+    <path d="M310 215 C295 230, 290 250, 285 268" stroke="#18181b" stroke-width="1.8" stroke-linecap="round" fill="none" />
+    <path d="M330 220 C335 240, 330 260, 320 272" stroke="#18181b" stroke-width="1.8" stroke-linecap="round" fill="none" />
+
+    <!-- Head & Hair & Glasses -->
+    <!-- Neck -->
+    <path d="M318 170 L322 188" stroke="#18181b" stroke-width="2.5" />
+    <!-- Face / Head -->
+    <path d="M320 135 C320 120, 340 120, 348 132 C355 145, 350 168, 338 172 C328 175, 320 155, 320 135 Z" fill="#ffffff" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round" />
+    <!-- Ear -->
+    <path d="M344 146 C348 144, 350 150, 345 154" stroke="#18181b" stroke-width="2" fill="none" />
+    <!-- Glasses -->
+    <rect x="323" y="137" width="10" height="9" rx="3" fill="#ffffff" stroke="#18181b" stroke-width="2" />
+    <rect x="335" y="137" width="10" height="9" rx="3" fill="#ffffff" stroke="#18181b" stroke-width="2" />
+    <line x1="333" y1="141" x2="335" y2="141" stroke="#18181b" stroke-width="2" />
+    <line x1="345" y1="140" x2="348" y2="142" stroke="#18181b" stroke-width="2" />
+    <!-- Smiling Mouth -->
+    <path d="M328 156 Q334 162 338 157" stroke="#18181b" stroke-width="2" stroke-linecap="round" fill="none" />
+    <circle cx="328" cy="141" r="1.5" fill="#18181b" />
+    <!-- Hair (Curly / Modern Doodle Style) -->
+    <path d="M318 138 
+             C312 135, 310 122, 316 114 
+             C322 106, 335 106, 342 110 
+             C350 108, 360 114, 362 124 
+             C364 134, 358 144, 350 144 
+             C348 136, 342 130, 336 130 
+             C328 130, 322 134, 318 138 Z" 
+          fill="#18181b" />
+
+    <!-- Left Arm & Hand typing -->
+    <path d="M322 195 C295 205, 270 215, 240 215" stroke="#ffffff" stroke-width="12" stroke-linecap="round" fill="none" />
+    <path d="M322 195 C295 205, 270 215, 240 215" stroke="#18181b" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+    <!-- Laptop -->
+    <g class="laptop-group">
+      <!-- Laptop Screen Base -->
+      <path d="M210 228 L170 190 L176 182 L216 220 Z" fill="#ffffff" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round" />
+      <!-- Orange Dot on Laptop Cover -->
+      <circle cx="193" cy="204" r="5" fill="#E86034" />
+      <!-- Laptop Keyboard Base -->
+      <path d="M205 228 L275 228 L265 238 L195 238 Z" fill="#ffffff" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round" />
+    </g>
+
+    <!-- Right Arm & Hand -->
+    <path d="M305 200 C275 210, 255 220, 235 225" stroke="#ffffff" stroke-width="12" stroke-linecap="round" fill="none" />
+    <path d="M305 200 C275 210, 255 220, 235 225" stroke="#18181b" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Floor Line / Ground Shadow -->
+  <line x1="80" y1="410" x2="480" y2="410" stroke="#18181b" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 6" />
+</svg>

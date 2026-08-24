@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380" width="100%" height="100%" fill="none">
+  <!-- Arched Window in Background -->
+  <g class="window-group" stroke="#18181b" stroke-width="2" stroke-linecap="round">
+    <!-- Window Outer Arch -->
+    <path d="M70 270 L70 120 C70 50, 190 50, 190 120 L190 270" stroke-width="2.2" />
+    <!-- Window Inner Cross Bars -->
+    <line x1="70" y1="130" x2="190" y2="130" stroke-width="1.8" />
+    <line x1="70" y1="190" x2="190" y2="190" stroke-width="1.8" />
+    <line x1="130" y1="65" x2="130" y2="270" stroke-width="1.8" />
+  </g>
+
+  <!-- Counter / Table Top Line -->
+  <line x1="50" y1="310" x2="380" y2="310" stroke="#18181b" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Person leaning on counter -->
+  <g class="person-about">
+    <!-- Body / Shoulders -->
+    <path d="M120 310 C120 265, 140 220, 195 210 C250 220, 275 265, 275 310 Z" fill="#ffffff" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round" />
+    <!-- Collar Line -->
+    <path d="M185 212 C195 220, 205 220, 215 212" stroke="#18181b" stroke-width="2" fill="none" />
+
+    <!-- Head & Face Profile / 3-quarter view -->
+    <path d="M182 195 L188 210" stroke="#18181b" stroke-width="2" />
+    <path d="M210 195 L206 210" stroke="#18181b" stroke-width="2" />
+    
+    <!-- Face Contour -->
+    <path d="M185 155 C185 140, 195 130, 215 130 C235 130, 248 145, 245 168 C242 188, 225 198, 205 198 C192 198, 185 180, 185 155 Z" fill="#ffffff" stroke="#18181b" stroke-width="2.5" stroke-linejoin="round" />
+
+    <!-- Ear -->
+    <path d="M188 165 C184 163, 184 172, 188 174" stroke="#18181b" stroke-width="2" fill="none" />
+
+    <!-- Eye & Eyebrow looking down/friendly -->
+    <path d="M222 154 Q228 150, 234 153" stroke="#18181b" stroke-width="2" stroke-linecap="round" fill="none" />
+    <circle cx="227" cy="160" r="2" fill="#18181b" />
+    <path d="M228 174 Q234 178, 238 172" stroke="#18181b" stroke-width="2" stroke-linecap="round" fill="none" />
+
+    <!-- Hair -->
+    <path d="M182 152 
+             C176 142, 178 128, 190 120 
+             C202 110, 222 110, 235 116 
+             C246 112, 258 120, 258 132 
+             C258 144, 250 152, 242 152 
+             C238 142, 230 134, 220 134 
+             C208 134, 198 142, 190 152 Z" 
+          fill="#18181b" />
+
+    <!-- Arms resting on counter & holding Mug -->
+    <path d="M150 260 C165 270, 190 280, 225 280" stroke="#ffffff" stroke-width="14" stroke-linecap="round" fill="none" />
+    <path d="M150 260 C165 270, 190 280, 225 280" stroke="#18181b" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+    <!-- Orange Coffee Mug -->
+    <g class="coffee-mug">
+      <!-- Mug Body -->
+      <rect x="232" y="252" width="30" height="34" rx="4" fill="#E86034" stroke="#18181b" stroke-width="2.5" />
+      <!-- Mug Handle -->
+      <path d="M262 260 C272 260, 272 276, 262 276" stroke="#18181b" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      <!-- Coffee Steam lines -->
+      <path d="M240 244 Q243 238 240 232" stroke="#E86034" stroke-width="1.8" stroke-linecap="round" fill="none" />
+      <path d="M248 246 Q251 236 248 228" stroke="#E86034" stroke-width="1.8" stroke-linecap="round" fill="none" />
+      <path d="M255 244 Q258 238 255 232" stroke="#E86034" stroke-width="1.8" stroke-linecap="round" fill="none" />
+    </g>
+
+    <!-- Right Hand wrapping mug -->
+    <path d="M225 275 C232 275, 235 265, 235 258" stroke="#18181b" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Stack of Books on Table Right -->
+  <g class="books-stack">
+    <!-- Bottom Book -->
+    <rect x="290" y="292" width="60" height="16" rx="2" fill="#ffffff" stroke="#18181b" stroke-width="2" />
+    <line x1="298" y1="300" x2="342" y2="300" stroke="#18181b" stroke-width="1.5" />
+    
+    <!-- Middle Book (Orange) -->
+    <rect x="294" y="278" width="54" height="14" rx="2" fill="#E86034" stroke="#18181b" stroke-width="2" />
+    <line x1="300" y1="285" x2="340" y2="285" stroke="#ffffff" stroke-width="1.5" />
+
+    <!-- Top Book -->
+    <rect x="298" y="266" width="48" height="12" rx="2" fill="#ffffff" stroke="#18181b" stroke-width="2" />
+    <line x1="304" y1="272" x2="338" y2="272" stroke="#18181b" stroke-width="1.5" />
+  </g>
+</svg>
